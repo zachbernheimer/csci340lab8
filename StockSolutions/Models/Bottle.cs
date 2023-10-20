@@ -4,10 +4,11 @@ namespace RazorPagesMovie.Models;
 public class Bottle
 {
     public int Id { get; set; }
-    // make a mandatory connection to one chemical
-    public int ChemicalId { get; set; }
-    public Chemical Chemical { get; set; } = null!;
+    public string Name { get; set; }
+    public string Formula { get; set; }
     public float Amount { get; set; }
     [StringLength(4)]
     public string AmountUnits { get; set; }
+    [StringLength(150)]
+    public string? Description { get; set; }
 }
