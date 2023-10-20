@@ -13,7 +13,7 @@ namespace StockSolutions.Data
             : base(options)
         {
         }
-        
+
         public DbSet<RazorPagesMovie.Models.Bottle> Bottle { get; set; } = default!;
     }
 }
