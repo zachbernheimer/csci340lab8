@@ -1,0 +1,37 @@
+@page
+@model StockSolutions.Pages.Bottles.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Bottle</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Bottle.Chemical)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Bottle.Chemical.Id)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Bottle.Amount)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Bottle.Amount)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Bottle.AmountUnits)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Bottle.AmountUnits)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Bottle?.Id">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

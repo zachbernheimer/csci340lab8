@@ -1,7 +1,12 @@
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using StockSolutions.Data;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddDbContext<StockSolutionsContext>(options =>
+    options.UseSqlite(builder.Configuration.GetConnectionString("StockSolutionsContext") ?? throw new InvalidOperationException("Connection string 'StockSolutionsContext' not found.")));
 
 var app = builder.Build();
 
