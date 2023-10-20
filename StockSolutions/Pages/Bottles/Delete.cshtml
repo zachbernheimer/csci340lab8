@@ -13,10 +13,16 @@
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Bottle.Chemical)
+            @Html.DisplayNameFor(model => model.Bottle.Name)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Bottle.Chemical.Id)
+            @Html.DisplayFor(model => model.Bottle.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Bottle.Formula)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Bottle.Formula)
         </dd>
         <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Bottle.Amount)
@@ -29,6 +35,12 @@
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Bottle.AmountUnits)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Bottle.Description)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Bottle.Description)
         </dd>
     </dl>
     

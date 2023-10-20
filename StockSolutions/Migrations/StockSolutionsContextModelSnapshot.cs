@@ -30,22 +30,6 @@ namespace StockSolutions.Migrations
                         .HasMaxLength(4)
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("ChemicalId")
-                        .HasColumnType("INTEGER");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ChemicalId");
-
-                    b.ToTable("Bottle");
-                });
-
-            modelBuilder.Entity("RazorPagesMovie.Models.Chemical", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
                     b.Property<string>("Description")
                         .HasMaxLength(150)
                         .HasColumnType("TEXT");
@@ -60,23 +44,7 @@ namespace StockSolutions.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Chemical");
-                });
-
-            modelBuilder.Entity("RazorPagesMovie.Models.Bottle", b =>
-                {
-                    b.HasOne("RazorPagesMovie.Models.Chemical", "Chemical")
-                        .WithMany("Bottles")
-                        .HasForeignKey("ChemicalId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Chemical");
-                });
-
-            modelBuilder.Entity("RazorPagesMovie.Models.Chemical", b =>
-                {
-                    b.Navigation("Bottles");
+                    b.ToTable("Bottle");
                 });
 #pragma warning restore 612, 618
         }

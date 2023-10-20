@@ -36,7 +36,6 @@ namespace StockSolutions.Pages.Bottles
                 return NotFound();
             }
             Bottle = bottle;
-           ViewData["ChemicalId"] = new SelectList(_context.Chemical, "Id", "Id");
             return Page();
         }
 

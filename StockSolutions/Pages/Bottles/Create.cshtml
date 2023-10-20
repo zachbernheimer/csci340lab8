@@ -14,8 +14,14 @@
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Bottle.ChemicalId" class="control-label"></label>
-                <select asp-for="Bottle.ChemicalId" class ="form-control" asp-items="ViewBag.ChemicalId"></select>
+                <label asp-for="Bottle.Name" class="control-label"></label>
+                <input asp-for="Bottle.Name" class="form-control" />
+                <span asp-validation-for="Bottle.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bottle.Formula" class="control-label"></label>
+                <input asp-for="Bottle.Formula" class="form-control" />
+                <span asp-validation-for="Bottle.Formula" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Bottle.Amount" class="control-label"></label>
@@ -26,6 +32,11 @@
                 <label asp-for="Bottle.AmountUnits" class="control-label"></label>
                 <input asp-for="Bottle.AmountUnits" class="form-control" />
                 <span asp-validation-for="Bottle.AmountUnits" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bottle.Description" class="control-label"></label>
+                <input asp-for="Bottle.Description" class="form-control" />
+                <span asp-validation-for="Bottle.Description" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />

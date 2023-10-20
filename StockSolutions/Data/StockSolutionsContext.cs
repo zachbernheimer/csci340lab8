@@ -13,9 +13,7 @@ namespace StockSolutions.Data
             : base(options)
         {
         }
-
-        public DbSet<RazorPagesMovie.Models.Chemical> Chemical { get; set; } = default!;
-
+        
         public DbSet<RazorPagesMovie.Models.Bottle> Bottle { get; set; } = default!;
     }
 }

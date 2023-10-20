@@ -25,8 +25,7 @@ namespace StockSolutions.Pages.Bottles
         {
             if (_context.Bottle != null)
             {
-                Bottle = await _context.Bottle
-                .Include(b => b.Chemical).ToListAsync();
+                Bottle = await _context.Bottle.ToListAsync();
             }
         }
     }
